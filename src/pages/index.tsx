@@ -48,11 +48,11 @@ const Home: NextPage = () => {
         <p className="mb-4">days left this month: {daysLeft}</p>
         
         {percentageRead > percentage ? (
-          <p>You've hit your goal for this month so far</p>
+          <p>You&apos;ve hit your goal for this month so far</p>
         ) : (
           <>
             <p>You want to get to {percentage}% read by the end of the month which will be {Math.floor(percentage / 100 * booksOwned)} books</p>
-            <p>You've alread read {booksRead} books, so you only need to read {Math.floor(percentage / 100 * booksOwned) - booksRead} more.</p>
+            <p>You&apos;ve alread read {booksRead} books, so you only need to read {Math.floor(percentage / 100 * booksOwned) - booksRead} more.</p>
             <p>{Math.ceil((Math.floor(percentage / 100 * booksOwned) - booksRead) / daysLeft)} books per day</p>
           </>
         )}
