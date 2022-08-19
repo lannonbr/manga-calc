@@ -34,7 +34,7 @@ const Home: NextPage = () => {
 
       <h1 className="text-4xl font-bold uppercase m-4">Manga Calc</h1>
 
-      <div className="flex flex-col w-96 border-black border-2 m-8 p-4">
+      <div className="flex flex-col w-96 border-black border-2 m-4 p-4">
         <label htmlFor="booksRead">Books Read:</label>
         <input name="booksRead" placeholder="Books read" type="number" onChange={e => setBooksRead(+e.target.value)} className="m-5 w-30 p-2 h-10 border border-black"/>
         <label htmlFor="booksOwned">Books Owned:</label>
@@ -51,9 +51,8 @@ const Home: NextPage = () => {
           <p>You&apos;ve hit your goal for this month so far</p>
         ) : (
           <>
-            <p>You want to get to {percentage}% read by the end of the month which will be {Math.floor(percentage / 100 * booksOwned)} books</p>
-            <p>You&apos;ve alread read {booksRead} books, so you only need to read {Math.floor(percentage / 100 * booksOwned) - booksRead} more.</p>
-            <p>{Math.ceil((Math.floor(percentage / 100 * booksOwned) - booksRead) / daysLeft)} books per day</p>
+            <p>You want to get to {percentage}% read by the end of the month which will be {Math.floor(percentage / 100 * booksOwned)} books.</p>
+            <p>You&apos;ve already read {booksRead} books, so you only need to read {Math.floor(percentage / 100 * booksOwned) - booksRead} more or {Math.ceil((Math.floor(percentage / 100 * booksOwned) - booksRead) / daysLeft)} books per day.</p>
           </>
         )}
       </section>
