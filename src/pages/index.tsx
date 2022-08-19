@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         <input name="percentage" placeholder="percentage" type="number" onChange={e => setPercentage(+e.target.value)} className="m-5 w-30 p-2 h-10 border border-black"/>
       </div>
 
-      <section className="ml-4">
+      <section className="mx-4">
         <p>{booksRead} / {booksOwned} ({percentageRead}%)</p>
         <p className="mb-4">days left this month: {daysLeft}</p>
         
