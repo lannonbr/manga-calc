@@ -56,6 +56,7 @@ const Home: NextPage = () => {
           </>
         )}
       </section>
+      <footer className="m-4">Built by <a className="text-blue-500 hover:underline" href="https://lannonbr.com">Benjamin Lannon</a> with <a className="text-blue-500 hover:underline" href="https://nextjs.org/">Next.js</a>. <a className="text-blue-500 hover:underline" href="https://github.com/lannonbr/manga-calc">GitHub Repo</a></footer>
     </>
   );
 };
