@@ -21,7 +21,7 @@ const Home: NextPage = () => {
     const day = dayjs()
     const nextMonth = day.startOf("month").add(1, "month")
 
-    setDaysLeft(nextMonth.diff(day, "days"))
+    setDaysLeft(Math.ceil(nextMonth.diff(day, "days", true)))
   }, [booksOwned, booksRead, percentage])
 
   return (
